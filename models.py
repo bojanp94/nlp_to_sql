@@ -85,8 +85,8 @@ class SimpleGRU:
 
             last = self.last_relevant(output, data_lenght)
 
-            fully_connected = tf.layers.dense(inputs=last, units=32, activation=tf.nn.sigmoid)
-            self._inference = tf.layers.dense(inputs=fully_connected, units=self.num_classes, name="inference")
+            #fully_connected = tf.layers.dense(inputs=last, units=32, activation=tf.nn.sigmoid)
+            self._inference = tf.layers.dense(inputs=last, units=self.num_classes, name="inference")
         return self._inference
 
     @property
